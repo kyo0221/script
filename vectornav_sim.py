@@ -20,9 +20,9 @@ class VectornavPublisher(Node):
         pose_with_covariance.pose = msg.pose
 
         #gazebo紫峰分のオフセットを追加
-        # pose_with_covariance.pose.pose.position.x += -3950640.6710130866
-        # pose_with_covariance.pose.pose.position.y += 3317155.34170999
-        # pose_with_covariance.pose.pose.position.z += 3738363.7332595424
+        pose_with_covariance.pose.pose.position.x += -3950640.6710130866
+        pose_with_covariance.pose.pose.position.y += 3317155.34170999
+        pose_with_covariance.pose.pose.position.z += 3738363.7332595424
 
         self.publisher_.publish(pose_with_covariance)
 
